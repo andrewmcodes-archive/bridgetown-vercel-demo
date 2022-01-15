@@ -7,6 +7,7 @@
     <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
 
     <main>
+      <span>Absolute URL: <%= resource.absolute_url %></span>
       <%= yield %>
     </main>
 
