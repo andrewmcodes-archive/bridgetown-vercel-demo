@@ -1,6 +1,6 @@
 class Builders::VercelUrl < SiteBuilder
   def build
-    hook :site, :pre_render do |s|
+    hook :site, :pre_render do |site|
       next unless ENV["VERCEL_URL"] && ENV["VERCEL_ENV"] != "production"
 
       Bridgetown.logger.info("Subbing Vercel URL")
